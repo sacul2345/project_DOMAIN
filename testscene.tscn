@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bp702dq0xfi6a"]
+
+[ext_resource type="Texture2D" uid="uid://dpxtpyu532aho" path="res://debugtexture.png" id="1_j2a3i"]
+[ext_resource type="Script" path="res://platform.gd" id="1_xrrd5"]
+[ext_resource type="Script" path="res://input.gd" id="2_lxg3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3j3g"]
+size = Vector2(1241, 132)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tlntw"]
+bounce = 0.7
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nfek5"]
+
+[node name="ExampleScene" type="Node2D"]
+
+[node name="Platform" type="StaticBody2D" parent="."]
+script = ExtResource("1_xrrd5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(16.5, 288)
+shape = SubResource("RectangleShape2D_k3j3g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(19.5001, 287.5)
+scale = Vector2(625.5, 64.5)
+texture = ExtResource("1_j2a3i")
+region_enabled = true
+region_rect = Rect2(2.08165e-12, 2.08165e-12, 2, 2)
+
+[node name="Ball" type="RigidBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_tlntw")
+linear_damp = 1.54
+script = ExtResource("2_lxg3n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_nfek5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball/CollisionShape2D"]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(8, 8)
+texture = ExtResource("1_j2a3i")
+
+[node name="Camera2D" type="Camera2D" parent="Ball"]
+zoom = Vector2(1.86, 1.86)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -766.0
+offset_top = -199.0
+offset_right = 781.0
+offset_bottom = 467.0
+color = Color(0.225911, 0.494044, 0.424872, 1)
