@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="the_fighting_game"
-run/main_scene="res://scenes/testscene.tscn"
+run/main_scene="res://maps/shibuyaStation.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[filesystem]
+
+import/fbx/enabled=false
 
 [input]
 
