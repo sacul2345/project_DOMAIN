@@ -9,7 +9,7 @@ func _ready():
 	platform = get_parent().get_node("Platform")
 	ball = get_parent().get_node("Ball")
 
-func _process(delta):
+func _physics_process(delta):
 	var distance = ball.position.x - platform.position.x
 	
 	if abs(distance) > 0.01:
