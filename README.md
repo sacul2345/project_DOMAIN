@@ -1,2 +1,2 @@
-# the_fighting_game
+# project_DOMAIN
 FIGHT
