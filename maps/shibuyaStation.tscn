@@ -1,23 +1,31 @@
 [gd_scene load_steps=3 format=3 uid="uid://xjxe5qaqlffh"]
 
-[ext_resource type="PackedScene" uid="uid://7gqg0ftllpjg" path="res://scenes/Shibuya/trainStation.tscn" id="1_xo4ca"]
+[ext_resource type="PackedScene" uid="uid://vmjx030sk2y7" path="res://scenes/Shibuya/trainStationEdited.tscn" id="1_vw4ub"]
 
 [sub_resource type="Environment" id="Environment_25uwk"]
 background_mode = 1
-background_color = Color(0.783286, 0.903131, 0.933694, 1)
+background_color = Color(0.886633, 0.875926, 0.864545, 1)
 background_energy_multiplier = 0.05
 ambient_light_color = Color(0.572988, 0.572988, 0.572988, 1)
 ambient_light_energy = 0.0
 tonemap_mode = 2
+ssr_enabled = true
+ssao_enabled = true
+ssao_intensity = 2.3
+glow_enabled = true
+fog_light_energy = 0.09
+fog_density = 0.007
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
 
 [node name="Shibuya station" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_25uwk")
 
-[node name="trainStationEdited" parent="." instance=ExtResource("1_xo4ca")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.0094, 15.9906, 2.19721)
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.0220766, 0, 0.999756, 0, 1, 0, -0.999756, 0, -0.0220766, 90.6889, 21.1666, 10.5811)
-fov = 53.5765
+transform = Transform3D(-0.0220766, 0, 0.999756, 0, 1, 0, -0.999756, 0, -0.0220766, 95.0239, 3.76405, -13.3418)
+fov = 57.9937
+
+[node name="trainStationEdited" parent="." instance=ExtResource("1_vw4ub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.0469, -0.0103537, -10.4214)
