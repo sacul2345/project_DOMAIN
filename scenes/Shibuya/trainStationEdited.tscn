@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://dh06n704ptlqg" path="res://textures/Shibuya/Tiles_Diffuse.tga" id="4_mf725"]
 [ext_resource type="PackedScene" uid="uid://dyxl5amdvvdit" path="res://scenes/Shibuya/hanging_light_ind_imroved.tscn" id="4_n72q3"]
 [ext_resource type="Texture2D" uid="uid://dn55gayv8g5o0" path="res://textures/Shibuya/Tiles_Normal.tga" id="5_e8lrh"]
-[ext_resource type="Texture2D" path="res://blender/rooffixed_ceiling_diffuse.png" id="6_jf3ut"]
+[ext_resource type="Texture2D" uid="uid://c4fm43hcuks8h" path="res://textures/Shibuya/ceiling_diffuse.tga" id="6_jf3ut"]
 [ext_resource type="Texture2D" uid="uid://cifpj4ddpemvt" path="res://textures/Shibuya/Tiles_spec.tga" id="6_tj37g"]
-[ext_resource type="Texture2D" path="res://blender/rooffixed_ceiling_normal.png" id="7_76teq"]
+[ext_resource type="Texture2D" uid="uid://cqjqm5hthraut" path="res://textures/Shibuya/ceiling_normal.tga" id="7_76teq"]
 [ext_resource type="Texture2D" uid="uid://c4fm43hcuks8h" path="res://textures/Shibuya/ceiling_diffuse.tga" id="9_cb4em"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asle6"]
