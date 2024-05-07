@@ -11,7 +11,8 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("test_button"):
-		animation.play("Cube_006Action_001")
+		#animation.play("Cube_006Action_001")
+		get_tree().call_group("RoundLights","_on_flicker_lights")
 	if Input.is_action_just_pressed("reset_button"):
 		animation.stop()
 		

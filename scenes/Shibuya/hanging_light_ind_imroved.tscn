@@ -14,7 +14,7 @@ albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.5
 emission_enabled = true
 emission = Color(0.415767, 0.876335, 1, 1)
-emission_energy_multiplier = 10.44
+emission_energy_multiplier = 42.14
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_n40dn"]
 _surfaces = [{
@@ -77,6 +77,7 @@ skeleton = NodePath("")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.718188, 0)
+visible = false
 light_color = Color(0.894118, 1, 1, 1)
 light_energy = 7.349
 spot_range = 8.31227

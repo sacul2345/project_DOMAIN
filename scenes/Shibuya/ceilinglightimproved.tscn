@@ -15,7 +15,11 @@ albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.5
 emission_enabled = true
 emission = Color(0.885802, 1, 0.98913, 1)
-emission_energy_multiplier = 40.0
+emission_energy_multiplier = 0.0
+emission_on_uv2 = true
+subsurf_scatter_strength = 1.0
+backlight_enabled = true
+backlight = Color(0.852395, 0.829698, 0.690249, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4yj4n"]
 _surfaces = [{
@@ -80,9 +84,8 @@ skeleton = NodePath("")
 script = ExtResource("1_c6buo")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(2.02799, 0, 0, 0, -8.86463e-08, 17.0782, 0, -2.02799, -1.05265e-08, 0, 3.53836, 0)
 light_color = Color(0.995893, 0.964651, 0.817329, 1)
 light_energy = 8.0
-light_volumetric_fog_energy = 6.224
 spot_range = 22.0136
 spot_angle = 65.6273

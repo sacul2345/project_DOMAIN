@@ -2,6 +2,7 @@ extends MeshInstance3D
 #FUCK this code is a FUCKING MESS!!! WILL THESE LIGHTS LAG AND CRASH THE GAME?!?!? MAYBE! FUCK shits fucked
 var light
 var timer
+var material
 
 func _ready():
 	light = get_node("SpotLight3D")

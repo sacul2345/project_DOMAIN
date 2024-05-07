@@ -54,12 +54,3 @@ offset_top = -199.0
 offset_right = 781.0
 offset_bottom = 467.0
 color = Color(0.225911, 0.494044, 0.424872, 1)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
