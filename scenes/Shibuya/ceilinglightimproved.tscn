@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddyueuu8222h8"]
+[gd_scene load_steps=6 format=3 uid="uid://ddyueuu8222h8"]
+
+[ext_resource type="Script" path="res://scenes/Shibuya/ceilinglightimproved.gd" id="1_c6buo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vfr5x"]
 resource_name = "Material.004"
@@ -71,15 +73,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4yj4n")
 
-[node name="Light_005" type="MeshInstance3D"]
+[node name="Light" type="MeshInstance3D"]
 transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, 0.137222, 1.56648, -0.181558)
 mesh = SubResource("ArrayMesh_g6fjv")
 skeleton = NodePath("")
+script = ExtResource("1_c6buo")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 light_color = Color(0.995893, 0.964651, 0.817329, 1)
-light_energy = 10.19
+light_energy = 8.0
 light_volumetric_fog_energy = 6.224
 spot_range = 22.0136
 spot_angle = 65.6273
