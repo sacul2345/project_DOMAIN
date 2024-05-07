@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddyueuu8222h8"]
 
-[ext_resource type="Script" path="res://scenes/Shibuya/ceilinglightimproved.gd" id="1_c6buo"]
+[ext_resource type="Script" path="res://code/Shibuya/flickerlights.gd" id="1_c6buo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vfr5x"]
 resource_name = "Material.004"
