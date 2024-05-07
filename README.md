@@ -2,6 +2,6 @@
 FIGHT
 
 Devs:
-sacul2345
-snoretacos
-SøuR.MeŁøN
+-sacul2345
+-snoretacos
+-SøuR.MeŁøN
