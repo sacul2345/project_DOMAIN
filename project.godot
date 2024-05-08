@@ -70,6 +70,10 @@ reset_button={
 ]
 }
 
+[physics]
+
+3d/default_gravity=20.0
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

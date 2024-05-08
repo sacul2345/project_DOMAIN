@@ -1,13 +1,16 @@
 extends Camera3D
 
 @export var SPEED : int = 5
+@export var OFFSET : int
+
+var Player
+var Distance
+var Direction
+
+func _ready():
+	Player = $"../Player"
 
 func _process(delta):
-	if Input.is_action_pressed("move_up"):
-		position.x -= SPEED * delta
-	if Input.is_action_pressed("move_down"):
-		position.x += SPEED * delta
-	if Input.is_action_pressed("move_left"):
-		position.z += SPEED * delta
-	if Input.is_action_pressed("move_right"):
-		position.z -= SPEED * delta
+	Distance = position.z - Player.position.z
+	
+	position.z = ((Distance / 2) * -1) + OFFSET
