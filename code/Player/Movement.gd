@@ -31,7 +31,9 @@ func _physics_process(delta):
 	
 	if direction:
 		velocity.z = direction.z * SPEED
+		Sprite.play("walk")
+		
 	else:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+		Sprite.play("idle")
 	move_and_slide()

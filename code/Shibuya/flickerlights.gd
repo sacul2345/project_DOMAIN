@@ -11,7 +11,7 @@ func _on_flicker_lights():
 		flickerLights(flickerRandomNum())
 	
 func willLightFlicker():
-	if randi_range(0,1) == 0:
+	if randi_range(0,4) == 4:
 		return false
 	else:
 		return true
