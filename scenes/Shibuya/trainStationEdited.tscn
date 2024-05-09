@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://vmjx030sk2y7"]
+[gd_scene load_steps=57 format=3 uid="uid://vmjx030sk2y7"]
 
 [ext_resource type="Script" path="res://code/Shibuya/lightFlicker.gd" id="1_e572f"]
 [ext_resource type="Texture2D" uid="uid://b6llkytrw5ynm" path="res://textures/Shibuya/pillar_diffuse.tga" id="1_v6x6m"]
@@ -723,15 +723,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4agfh")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6p5a"]
+size = Vector3(2.29468, 1, 1.87445)
+
 [node name="trainStationEdited" type="Node3D"]
 script = ExtResource("1_e572f")
 metadata/_edit_lock_ = true
 
 [node name="Pillar" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.536423, 0, 0.624612, 0, 3.11624, 0, -0.624612, 0, 0.536423, 7.0731, 4.02894, -10.6736)
+transform = Transform3D(0.536423, 0, 0.624612, 0, 3.68006, 0, -0.624612, 0, 0.536423, 7.0731, 4.54477, -10.6736)
 mesh = SubResource("ArrayMesh_7m8b1")
 skeleton = NodePath("")
-metadata/_edit_lock_ = true
 
 [node name="Elevator" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.62504, 0, 0, 0, 3.51955, 0, 0, 0, 1, -24.8979, 3.38516, -19.4275)
@@ -746,22 +748,24 @@ skeleton = NodePath("")
 metadata/_edit_lock_ = true
 
 [node name="Back Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(0, 1, 0, -12.1936, 0, 0, 0, 0, 50.2443, -36.275, 0, 0)
+transform = Transform3D(0, 1, 0, -13.6146, 0, 0, 0, 0, 50.2443, -36.275, -0.0467439, 0)
 mesh = SubResource("ArrayMesh_1lxov")
 skeleton = NodePath("")
-metadata/_edit_lock_ = true
 
 [node name="Pillar_001" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.804503, 0, -0.175115, 0, 3.11624, 0, 0.175115, 0, -0.804503, 7.0731, 4.04013, 10.772)
+transform = Transform3D(-0.804503, 0, -0.175115, 0, 3.68006, 0, 0.175115, 0, -0.804503, 7.0731, 4.55799, 10.772)
 mesh = SubResource("ArrayMesh_o36hh")
 skeleton = NodePath("")
-metadata/_edit_lock_ = true
 
 [node name="Bench_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.691056, 0, 0, 0, 0.691056, 0, 0, 0, 3.01108, -35.4163, 1.45305, 21.3943)
 mesh = SubResource("ArrayMesh_lkqub")
 skeleton = NodePath("")
-metadata/_edit_lock_ = true
+
+[node name="Bench_003" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.691056, 0, 0, 0, 0.691056, 0, 0, 0, 3.01108, 7.3048, 1.45305, -6.47142)
+mesh = SubResource("ArrayMesh_lkqub")
+skeleton = NodePath("")
 
 [node name="Cube_011" type="MeshInstance3D" parent="."]
 transform = Transform3D(-50.8149, 0, -2.10062e-05, 0, 16.8584, 0, 1.65576e-05, 0, -64.4674, -7.13565, 0.994954, 11.2194)
@@ -923,8 +927,7 @@ mesh = SubResource("ArrayMesh_28g44")
 skeleton = NodePath("")
 
 [node name="Hanging Lights" parent="." instance=ExtResource("4_n72q3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94169, 6.11722, 37.2031)
-metadata/_edit_lock_ = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94169, 7.87523, 37.2031)
 
 [node name="Hanging Light IND2" parent="Hanging Lights" instance=ExtResource("4_n72q3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.13723)
@@ -1063,16 +1066,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9043, -2.6801, -0.547986)
 shape = SubResource("BoxShape3D_gsyi6")
 
 [node name="Pillar_002" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.823341, 0, 0, 0, 3.11624, 0, 0, 0, 0.823341, -31.5629, 3.84009, -10.6736)
+transform = Transform3D(0.823341, 0, 0, 0, 3.68006, 0, 0, 0, 0.823341, -31.5629, 4.32175, -10.6736)
 mesh = SubResource("ArrayMesh_3hme3")
 skeleton = NodePath("")
-metadata/_edit_lock_ = true
 
 [node name="Pillar_003" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.563143, 0, -0.600633, 0, 3.11624, 0, 0.600633, 0, -0.563143, -31.5629, 3.84009, 10.772)
+transform = Transform3D(-0.563143, 0, -0.600633, 0, 3.68006, 0, 0.600633, 0, -0.563143, -31.5629, 4.32175, 10.772)
 mesh = SubResource("ArrayMesh_g8dlh")
 skeleton = NodePath("")
-metadata/_edit_lock_ = true
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.643514, 0, 0, 0, 0.776759, 0, 0, 0, 0.420938, 7.02832, 1.71037, 9.29113)
@@ -1081,13 +1082,19 @@ skeleton = NodePath("")
 metadata/_edit_lock_ = true
 
 [node name="Ceiling_002" type="MeshInstance3D" parent="."]
-transform = Transform3D(10.6347, 0, 0, 0, 1, 0, 0, 0, 54.7276, -8.88866, 8.31532, 3.46301)
+transform = Transform3D(10.6347, 0, 0, 0, 1, 0, 0, 0, 54.7276, -8.88866, 9.97744, 3.46301)
 mesh = SubResource("ArrayMesh_sbai1")
 skeleton = NodePath("")
-metadata/_edit_lock_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling_002"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36235, -1.37092, 0.0183675)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050415, 0, -0.032074)
+shape = SubResource("BoxShape3D_y6p5a")
 
 [node name="RoundLightContainer" type="Node3D" parent="."]
-metadata/_edit_lock_ = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.81187, 0)
 
 [node name="Light_005" parent="RoundLightContainer" groups=["RoundLights"] instance=ExtResource("2_tlobq")]
 transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, 12.9389, 6.22014, 31.9423)
@@ -1153,10 +1160,10 @@ transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -35.537
 transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -35.5376, 6.22014, -4.31497)
 
 [node name="Light_027" parent="RoundLightContainer" groups=["RoundLights"] instance=ExtResource("2_tlobq")]
-transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -39.5421, 5.64135, -0.0300903)
+transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -39.5421, 4.26549, -0.0300903)
 
 [node name="Light_028" parent="RoundLightContainer" groups=["RoundLights"] instance=ExtResource("2_tlobq")]
-transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -50.6886, 5.64135, -0.0300903)
+transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -50.6886, 4.26549, -0.0300903)
 
 [node name="Light_026" parent="RoundLightContainer" groups=["RoundLights"] instance=ExtResource("2_tlobq")]
 transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -35.5376, 6.22014, -16.6193)

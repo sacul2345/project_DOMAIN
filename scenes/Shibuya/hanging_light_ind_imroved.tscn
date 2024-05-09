@@ -14,7 +14,7 @@ albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.5
 emission_enabled = true
 emission = Color(0.415767, 0.876335, 1, 1)
-emission_energy_multiplier = 42.14
+emission_energy_multiplier = 57.89
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_n40dn"]
 _surfaces = [{

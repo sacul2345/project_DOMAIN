@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 5.5
+const SPEED = 4.0
+const JUMP_VELOCITY = 15
 var direction
 var Sprite
 
@@ -15,6 +15,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		Sprite.play("jump")
 
 	if Input.is_action_just_pressed("move_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -31,9 +32,11 @@ func _physics_process(delta):
 	
 	if direction:
 		velocity.z = direction.z * SPEED
-		Sprite.play("walk")
+		if is_on_floor():
+			Sprite.play("run")
 		
 	else:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-		Sprite.play("idle")
+		if is_on_floor():
+			Sprite.play("idle")
 	move_and_slide()
