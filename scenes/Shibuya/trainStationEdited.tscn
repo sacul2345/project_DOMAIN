@@ -653,10 +653,10 @@ resource_name = "Material.024"
 cull_mode = 2
 albedo_texture = ExtResource("9_cb4em")
 normal_enabled = true
-normal_scale = 0.6
+normal_scale = 3.38
 normal_texture = ExtResource("7_76teq")
 heightmap_enabled = true
-heightmap_scale = -2.715
+heightmap_scale = -3.188
 heightmap_texture = ExtResource("9_cb4em")
 heightmap_flip_texture = true
 uv1_scale = Vector3(102.02, 21.59, 1)
@@ -769,7 +769,6 @@ skeleton = NodePath("")
 
 [node name="Cube_011" type="MeshInstance3D" parent="."]
 transform = Transform3D(-50.8149, 0, -2.10062e-05, 0, 16.8584, 0, 1.65576e-05, 0, -64.4674, -7.13565, 0.994954, 11.2194)
-visible = false
 mesh = SubResource("ArrayMesh_cvl7x")
 skeleton = NodePath("")
 metadata/_edit_lock_ = true
@@ -1085,6 +1084,7 @@ metadata/_edit_lock_ = true
 transform = Transform3D(10.6347, 0, 0, 0, 1, 0, 0, 0, 54.7276, -8.88866, 9.97744, 3.46301)
 mesh = SubResource("ArrayMesh_sbai1")
 skeleton = NodePath("")
+metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ceiling_002"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36235, -1.37092, 0.0183675)

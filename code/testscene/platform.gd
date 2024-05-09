@@ -14,5 +14,5 @@ func _physics_process(delta):
 	
 	if abs(distance) > 0.01:
 		var speed = min(maxSpeed, abs(distance)) * sign(distance)
-		print(speed, " , " , delta)
+		print(speed, " , " , distance)
 		platform.position.x += (speed * delta) * AMPLIFY
