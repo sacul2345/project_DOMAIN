@@ -1059,6 +1059,7 @@ metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40653, 3.32296, 0)
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9043, -2.6801, -0.547986)
@@ -1088,6 +1089,7 @@ metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ceiling_002"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36235, -1.37092, 0.0183675)
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling_002/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050415, 0, -0.032074)

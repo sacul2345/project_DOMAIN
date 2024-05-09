@@ -4,21 +4,17 @@ var playerOne
 var playerTwo
 var playerOneSpawn
 var playerTwoSpawn
-var playerOneInstance
-var playerTwoInstance
 
 var playerGlobal
 
 func _ready():
 	playerGlobal = get_node("/root/PlayerGlobals")
-	playerOneSpawn = get_node("playerOneSpawn")
-	playerTwoSpawn = get_node("playerTwoSpawn")
+	playerOneSpawn = get_node("playerOneContainer")
+	playerTwoSpawn = get_node("playerTwoContainer")
 	
-	playerOne = playerGlobal.get_player(1)
-	playerTwo = playerGlobal.get_player(2)
+	playerOne = playerGlobal.get_player(1).instantiate()
+	playerTwo = playerGlobal.get_player(2).instantiate()
 	
-	playerOneInstance = playerOne.instantiate()
-	playerTwoInstance = playerTwo.instantiate()
 	
-	playerOneSpawn.add_child(playerOneInstance)
-	playerTwoSpawn.add_child(playerTwoInstance)
+	playerOneSpawn.add_child(playerOne)
+	playerTwoSpawn.add_child(playerTwo)

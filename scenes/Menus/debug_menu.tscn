@@ -11,6 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1970.0
 offset_bottom = 1142.0
 color = Color(0.162066, 0.162066, 0.162066, 1)
