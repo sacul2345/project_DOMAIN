@@ -98,6 +98,9 @@ player_one_move_right={
 
 [layer_names]
 
+3d_physics/layer_1="floor/ceiling"
+3d_physics/layer_2="walls"
+3d_physics/layer_3="players"
 3d_physics/vsync/vsync_mode=0
 
 [physics]
