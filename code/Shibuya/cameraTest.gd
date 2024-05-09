@@ -7,10 +7,9 @@ var Player
 var Distance
 var Direction
 
-func _ready():
-	Player = $"../Player"
+#func _ready():
+	#Player = $"../Player"
 
-func _physics_process(delta):
-	Distance = position.z - Player.position.z
-	
-	position.z = ((((Distance / 2) * -1) * SPEED) * delta) + OFFSET
+#func _physics_process(delta):
+	#Distance = position.z - Player.position.z
+	#position.z = ((((Distance / 2) * -1) * SPEED) * delta) + OFFSET

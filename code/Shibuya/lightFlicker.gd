@@ -16,6 +16,6 @@ func _process(_delta):
 	if Input.is_action_just_pressed("reset_button"):
 		animation.stop()
 		
-func _on_train_detection_area_entered(train):
+func _on_train_detection_area_entered(_train):
 	print("test")
 	get_tree().call_group("RoundLights","_on_flicker_lights")
