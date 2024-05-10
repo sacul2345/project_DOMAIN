@@ -3,6 +3,8 @@ extends CharacterBody3D
 const SPEED = 4.0
 const JUMP_VELOCITY = 17
 
+var playerData
+
 var direction
 var Sprite
 var parentNode
@@ -43,6 +45,11 @@ func _ready():
 		inputRight = "player_two_move_right"
 		inputLeft = "player_two_move_left"
 		Sprite.flip_h = true
+		
+	playerData = parentNode.get_parent()
+	
+#func _flip_player():
+	#Sprite.flip_h = not Sprite.flip_h
 	
 func _physics_process(delta):
 	

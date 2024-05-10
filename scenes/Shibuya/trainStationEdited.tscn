@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://vmjx030sk2y7"]
+[gd_scene load_steps=55 format=3 uid="uid://vmjx030sk2y7"]
 
 [ext_resource type="Script" path="res://code/Shibuya/mapEvent.gd" id="1_kxp05"]
 [ext_resource type="Texture2D" uid="uid://b6llkytrw5ynm" path="res://textures/Shibuya/pillar_diffuse.tga" id="1_v6x6m"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cifpj4ddpemvt" path="res://textures/Shibuya/Tiles_spec.tga" id="6_tj37g"]
 [ext_resource type="Texture2D" uid="uid://cqjqm5hthraut" path="res://textures/Shibuya/ceiling_normal.tga" id="7_76teq"]
 [ext_resource type="Texture2D" uid="uid://c4fm43hcuks8h" path="res://textures/Shibuya/ceiling_diffuse.tga" id="9_cb4em"]
+[ext_resource type="PackedScene" uid="uid://co75uc20epk8i" path="res://scenes/Shibuya/outer_walls.tscn" id="12_e6u6p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asle6"]
 resource_name = "Material.020"
@@ -325,38 +326,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_y0kdt")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgut0"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_rsnst"]
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2.00001),
-"format": 34896613377,
-"index_count": 48,
-"index_data": PackedByteArray(8, 0, 3, 0, 9, 0, 8, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 10, 0, 7, 0, 6, 0, 11, 0, 10, 0, 7, 0, 9, 0, 3, 0, 7, 0, 10, 0, 9, 0, 0, 0, 9, 0, 1, 0, 0, 0, 8, 0, 9, 0, 5, 0, 11, 0, 4, 0, 5, 0, 10, 0, 11, 0, 4, 0, 8, 0, 0, 0, 4, 0, 11, 0, 8, 0, 1, 0, 10, 0, 5, 0, 1, 0, 9, 0, 10, 0),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray(198, 110, 34, 83, 254, 255, 0, 0, 198, 110, 220, 172, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 56, 145, 34, 83, 254, 255, 0, 0, 56, 145, 220, 172, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0)
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_cvl7x"]
-resource_name = "trainStationEdited_Cube_013"
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2.00001),
-"attribute_data": PackedByteArray(200, 116, 200, 20, 54, 139, 200, 20, 255, 95, 255, 191, 255, 95, 255, 191, 255, 159, 255, 191, 255, 223, 255, 127, 255, 159, 255, 191, 200, 116, 55, 43, 54, 139, 55, 43, 255, 95, 255, 127, 255, 95, 255, 127, 255, 159, 255, 127, 255, 159, 255, 127, 255, 159, 255, 127, 255, 95, 0, 0, 255, 95, 255, 255, 255, 159, 0, 0, 255, 223, 255, 63, 255, 159, 255, 255, 255, 159, 255, 63, 255, 159, 255, 63, 255, 159, 255, 63, 255, 95, 255, 63, 255, 95, 255, 63),
-"format": 34896613399,
-"index_count": 48,
-"index_data": PackedByteArray(15, 0, 6, 0, 18, 0, 15, 0, 3, 0, 6, 0, 2, 0, 11, 0, 4, 0, 2, 0, 9, 0, 11, 0, 10, 0, 21, 0, 13, 0, 10, 0, 23, 0, 21, 0, 12, 0, 17, 0, 5, 0, 12, 0, 20, 0, 17, 0, 0, 0, 16, 0, 1, 0, 0, 0, 14, 0, 16, 0, 8, 0, 22, 0, 7, 0, 8, 0, 19, 0, 22, 0, 7, 0, 14, 0, 0, 0, 7, 0, 22, 0, 14, 0, 1, 0, 19, 0, 8, 0, 1, 0, 16, 0, 19, 0),
-"material": SubResource("StandardMaterial3D_fgut0"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray(198, 110, 34, 83, 254, 255, 146, 189, 198, 110, 220, 172, 254, 255, 111, 208, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 84, 213, 56, 145, 34, 83, 254, 255, 111, 208, 56, 145, 220, 172, 254, 255, 146, 189, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 84, 213, 0, 0, 0, 0, 254, 255, 166, 186, 0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 223, 189, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 254, 255, 84, 213, 255, 255, 255, 255, 254, 255, 166, 186, 255, 255, 255, 255, 254, 255, 255, 255, 255, 255, 255, 255, 254, 255, 84, 213, 255, 255, 0, 0, 254, 255, 223, 189, 255, 255, 0, 0, 254, 255, 84, 213, 255, 255, 255, 255, 255, 255, 255, 255, 255, 191, 255, 191, 84, 213, 84, 213, 255, 191, 255, 191, 255, 127, 255, 191, 84, 213, 84, 213, 255, 255, 255, 255, 255, 255, 255, 255, 255, 191, 255, 191, 170, 42, 170, 42, 255, 191, 255, 191, 255, 127, 255, 191, 170, 42, 170, 42, 255, 255, 255, 255, 84, 213, 84, 213, 255, 255, 255, 255, 255, 127, 255, 191, 84, 213, 84, 213, 255, 255, 255, 255, 255, 127, 255, 191, 170, 42, 170, 42, 255, 255, 255, 255, 170, 42, 170, 42)
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_rsnst")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_my4u8"]
 resource_name = "Material.009"
 cull_mode = 2
@@ -472,7 +441,7 @@ heightmap_scale = -3.84
 heightmap_texture = ExtResource("6_tj37g")
 subsurf_scatter_strength = 1.0
 refraction_texture = ExtResource("6_tj37g")
-uv1_scale = Vector3(67.975, 5.625, 1)
+uv1_scale = Vector3(93.165, 5.625, 1)
 uv1_offset = Vector3(0, -19, 0)
 texture_filter = 2
 
@@ -736,10 +705,9 @@ mesh = SubResource("ArrayMesh_7m8b1")
 skeleton = NodePath("")
 
 [node name="Elevator" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.62504, 0, 0, 0, 3.51955, 0, 0, 0, 1, -24.8979, 3.38516, -19.4275)
+transform = Transform3D(4.62504, 0, 0, 0, 4.40994, 0, 0, 0, 2.1957, -24.8979, 3.8112, -20.6661)
 mesh = SubResource("ArrayMesh_vl8xy")
 skeleton = NodePath("")
-metadata/_edit_lock_ = true
 
 [node name="Screen" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.337946, 0, 0, 0, 1.82411, 0, 0, 0, 1.64913, -24.5895, 2.64077, -8.47968)
@@ -748,7 +716,7 @@ skeleton = NodePath("")
 metadata/_edit_lock_ = true
 
 [node name="Back Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(0, 1, 0, -13.6146, 0, 0, 0, 0, 50.2443, -36.275, -0.0467439, 0)
+transform = Transform3D(0, 1.48069, 0, -13.6146, 0, 0, 0, 0, 69.0999, -36.275, -0.143731, 0)
 mesh = SubResource("ArrayMesh_1lxov")
 skeleton = NodePath("")
 
@@ -767,12 +735,6 @@ transform = Transform3D(0.691056, 0, 0, 0, 0.691056, 0, 0, 0, 3.01108, 7.3048, 1
 mesh = SubResource("ArrayMesh_lkqub")
 skeleton = NodePath("")
 
-[node name="Cube_011" type="MeshInstance3D" parent="."]
-transform = Transform3D(-50.8149, 0, -2.10062e-05, 0, 16.8584, 0, 1.65576e-05, 0, -64.4674, -7.13565, 0.994954, 11.2194)
-mesh = SubResource("ArrayMesh_cvl7x")
-skeleton = NodePath("")
-metadata/_edit_lock_ = true
-
 [node name="Gates" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.344318, 1.81627, 35.1607)
 mesh = SubResource("ArrayMesh_28g44")
@@ -781,6 +743,21 @@ metadata/_edit_lock_ = true
 
 [node name="Gate IND2" type="MeshInstance3D" parent="Gates"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75834e-06, 0, 5.40275)
+mesh = SubResource("ArrayMesh_28g44")
+skeleton = NodePath("")
+
+[node name="Gate IND16" type="MeshInstance3D" parent="Gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81794e-06, 0, -5.39828)
+mesh = SubResource("ArrayMesh_28g44")
+skeleton = NodePath("")
+
+[node name="Gate IND17" type="MeshInstance3D" parent="Gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.57628e-06, 0, -10.7545)
+mesh = SubResource("ArrayMesh_28g44")
+skeleton = NodePath("")
+
+[node name="Gate IND18" type="MeshInstance3D" parent="Gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.33462e-06, 0, -16.1645)
 mesh = SubResource("ArrayMesh_28g44")
 skeleton = NodePath("")
 
@@ -846,6 +823,21 @@ skeleton = NodePath("")
 
 [node name="Gate IND15" type="MeshInstance3D" parent="Gates"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46465e-05, 0, 75.6661)
+mesh = SubResource("ArrayMesh_28g44")
+skeleton = NodePath("")
+
+[node name="Gate IND19" type="MeshInstance3D" parent="Gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62558e-05, 0, 81.0455)
+mesh = SubResource("ArrayMesh_28g44")
+skeleton = NodePath("")
+
+[node name="Gate IND20" type="MeshInstance3D" parent="Gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.80142e-05, 0, 86.4549)
+mesh = SubResource("ArrayMesh_28g44")
+skeleton = NodePath("")
+
+[node name="Gate IND21" type="MeshInstance3D" parent="Gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97725e-05, 0, 91.8705)
 mesh = SubResource("ArrayMesh_28g44")
 skeleton = NodePath("")
 
@@ -1052,10 +1044,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7244, 0, -50.5504)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7244, 0, -54.6876)
 
 [node name="Floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0615026, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.50952, 0, -0.0615026, 0)
 mesh = SubResource("ArrayMesh_70n4b")
 skeleton = NodePath("")
-metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40653, 3.32296, 0)
@@ -1165,7 +1156,10 @@ transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -35.537
 transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -39.5421, 4.26549, -0.0300903)
 
 [node name="Light_028" parent="RoundLightContainer" groups=["RoundLights"] instance=ExtResource("2_tlobq")]
-transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -50.6886, 4.26549, -0.0300903)
+transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -55.4609, 4.26549, -0.0300903)
 
 [node name="Light_026" parent="RoundLightContainer" groups=["RoundLights"] instance=ExtResource("2_tlobq")]
 transform = Transform3D(0.493099, 0, 0, 0, 0.0585541, 0, 0, 0, 0.493099, -35.5376, 6.22014, -16.6193)
+
+[node name="trainStationEdited" parent="." instance=ExtResource("12_e6u6p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.20973, 0.971051, -0.0682496)

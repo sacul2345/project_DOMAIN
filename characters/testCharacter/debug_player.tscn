@@ -198,7 +198,7 @@ axis_lock_angular_z = true
 script = ExtResource("1_oa863")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.510317, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526691, 0)
 shape = SubResource("CapsuleShape3D_8ixo7")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
