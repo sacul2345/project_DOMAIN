@@ -14,6 +14,7 @@ var inputUp
 var inputDown
 var inputRight
 var inputLeft
+var crouching
 
 var leftRaycast
 var rightRaycast
@@ -68,6 +69,11 @@ func flip_player():
 		Sprite.flip_h = global_position.z - opponent.global_position.z < 0 
 	
 func _physics_process(delta):
+	
+	if Input.is_action_pressed(inputDown):
+		crouching = true
+	else:
+		crouching = false
 	
 	if not is_on_floor():
 		velocity.y -= gravity * delta
