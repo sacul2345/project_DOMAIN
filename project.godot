@@ -110,5 +110,4 @@ player_one_move_right={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-anti_aliasing/quality/msaa_3d=3
 textures/hdr_2d=false

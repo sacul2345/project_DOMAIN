@@ -18,7 +18,8 @@ func _player_loaded(player): # 'player' is either an int 0 or 1 to specify playe
 		playerTwo = get_child(1).get_child(0)
 		print("loaded player " , player + 1 , ": " ,playerTwo)
 	
-	if playerOne != null && playerTwo != null:
+	if playerOne && playerTwo:
+		print("both players loaded")
 		sendDataScript.emit(self)
 		
 func _ready():
