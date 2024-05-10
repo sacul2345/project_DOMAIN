@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://buh5nwdlt4phg"]
 
-[ext_resource type="Script" path="res://characters/testCharacter/Movement.gd" id="1_m81nx"]
+[ext_resource type="Script" path="res://characters/testCharacter/Player.gd" id="1_oa863"]
 [ext_resource type="Texture2D" uid="uid://dpnc3ogc7rrc1" path="res://characters/sprites/platformer_sprites_pixelized.png" id="2_bkym0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8ixo7"]
@@ -195,7 +195,7 @@ collision_layer = 4
 axis_lock_linear_x = true
 axis_lock_angular_x = true
 axis_lock_angular_z = true
-script = ExtResource("1_m81nx")
+script = ExtResource("1_oa863")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.510317, 0)

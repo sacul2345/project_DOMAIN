@@ -9,8 +9,8 @@ var playerGlobal
 
 func _ready():
 	playerGlobal = get_node("/root/PlayerGlobals")
-	playerOneSpawn = get_node("playerOneContainer")
-	playerTwoSpawn = get_node("playerTwoContainer")
+	playerOneSpawn = get_node("Players").get_child(0)
+	playerTwoSpawn = get_node("Players").get_child(1)
 	
 	playerOne = playerGlobal.get_player(1).instantiate()
 	playerTwo = playerGlobal.get_player(2).instantiate()
@@ -18,3 +18,4 @@ func _ready():
 	
 	playerOneSpawn.add_child(playerOne)
 	playerTwoSpawn.add_child(playerTwo)
+

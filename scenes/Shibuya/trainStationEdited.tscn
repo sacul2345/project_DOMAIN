@@ -1,6 +1,6 @@
 [gd_scene load_steps=57 format=3 uid="uid://vmjx030sk2y7"]
 
-[ext_resource type="Script" path="res://code/Shibuya/lightFlicker.gd" id="1_e572f"]
+[ext_resource type="Script" path="res://code/Shibuya/mapEvent.gd" id="1_kxp05"]
 [ext_resource type="Texture2D" uid="uid://b6llkytrw5ynm" path="res://textures/Shibuya/pillar_diffuse.tga" id="1_v6x6m"]
 [ext_resource type="Texture2D" uid="uid://c2xavlenmov8b" path="res://textures/Shibuya/gate_diffuse.tga" id="2_q0h61"]
 [ext_resource type="PackedScene" uid="uid://ddyueuu8222h8" path="res://scenes/Shibuya/ceilinglightimproved.tscn" id="2_tlobq"]
@@ -727,7 +727,7 @@ shadow_mesh = SubResource("ArrayMesh_4agfh")
 size = Vector3(2.29468, 1, 1.87445)
 
 [node name="trainStationEdited" type="Node3D"]
-script = ExtResource("1_e572f")
+script = ExtResource("1_kxp05")
 metadata/_edit_lock_ = true
 
 [node name="Pillar" type="MeshInstance3D" parent="."]
