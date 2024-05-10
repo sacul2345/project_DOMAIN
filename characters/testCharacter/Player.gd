@@ -8,6 +8,7 @@ var playerData
 var direction
 var Sprite
 var parentNode
+var opponent
 
 var inputUp
 var inputDown
@@ -26,6 +27,8 @@ func _ready():
 	
 	leftRaycast = get_node("LeftRayCast")
 	rightRaycast = get_node("RightRayCast")
+	
+	playerData = parentNode.get_parent()
 	
 	# maybe make this a list of enums in the future in global player because
 	# this is going to become a mess once more controls are added..
@@ -46,10 +49,23 @@ func _ready():
 		inputLeft = "player_two_move_left"
 		Sprite.flip_h = true
 		
-	playerData = parentNode.get_parent()
+	playerData.connect("sendDataScript",_get_player_data)
+
+func _get_player_data(data):
+	if parentNode.name == "playerOneContainer":
+		opponent = data.playerTwo
+	else:
+		opponent = data.playerOne
 	
-#func _flip_player():
-	#Sprite.flip_h = not Sprite.flip_h
+	print(parentNode.name , " - opp: " ,opponent)
+		
+func flip_player():
+	if opponent:
+		if opponent.global_position.z < global_position.z:
+			Sprite.flip_h = false
+		if opponent.global_position.z > global_position.z:
+			Sprite.flip_h = true
+	
 	
 func _physics_process(delta):
 	
@@ -84,4 +100,5 @@ func _physics_process(delta):
 		if is_on_floor():
 			Sprite.play("idle")
 	
+	flip_player()
 	move_and_slide()

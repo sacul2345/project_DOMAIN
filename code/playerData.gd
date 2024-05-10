@@ -4,9 +4,7 @@ extends Node3D
 @export var playerTwoHealth = 100
 
 signal sendDataScript
-signal flipPlayers
 
-var direction
 var playerOne
 var playerTwo
 
@@ -23,8 +21,6 @@ func _player_loaded(player): # 'player' is either an int 0 or 1 to specify playe
 	if playerOne != null && playerTwo != null:
 		sendDataScript.emit(self)
 		
-		
-		
 func _ready():
 	pass
 
@@ -33,5 +29,4 @@ func _process(_delta):
 		if playerOne != null && playerTwo != null:
 			playersLoaded = true
 	if playersLoaded:
-		if playerOne.position.z < playerTwo.position.z:
-			flipPlayers.emit()
+		pass
