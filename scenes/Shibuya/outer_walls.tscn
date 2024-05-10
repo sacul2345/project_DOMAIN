@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://co75uc20epk8i"]
+[gd_scene load_steps=10 format=3 uid="uid://co75uc20epk8i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trwoy"]
 resource_name = "Material.023"
@@ -37,6 +37,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_psag3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_plnu6"]
+size = Vector3(1.99219, 1, 2.04004)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_kvhc1"]
 _surfaces = [{
@@ -109,10 +112,24 @@ transform = Transform3D(13.5363, 0, 0, 0, 0, -5.34702, 0, 5.34702, 0, 14.5415, 1
 mesh = SubResource("ArrayMesh_k1h55")
 skeleton = NodePath("")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane"]
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000976562, 0.377483, -0.0268555)
+shape = SubResource("BoxShape3D_plnu6")
+
 [node name="Plane_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(13.5363, 0, 0, 0, 0, -5.34702, 0, 5.34702, 0, 14.5415, 1.92665, -37.4844)
 mesh = SubResource("ArrayMesh_j2fc0")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane_001"]
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000976562, -0.39056, -0.0268555)
+shape = SubResource("BoxShape3D_plnu6")
 
 [node name="Cube_011" type="MeshInstance3D" parent="."]
 transform = Transform3D(-50.8149, 0, -2.10062e-05, 0, 16.8584, 0, 1.65576e-05, 0, -64.4674, -7.13564, 1.0212, 11.2192)

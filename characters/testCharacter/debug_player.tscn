@@ -1,7 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://buh5nwdlt4phg"]
+[gd_scene load_steps=28 format=3 uid="uid://buh5nwdlt4phg"]
 
 [ext_resource type="Script" path="res://characters/testCharacter/Player.gd" id="1_oa863"]
 [ext_resource type="Texture2D" uid="uid://dpnc3ogc7rrc1" path="res://characters/sprites/platformer_sprites_pixelized.png" id="2_bkym0"]
+[ext_resource type="Script" path="res://characters/testCharacter/Attacks.gd" id="3_lb45f"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8ixo7"]
 radius = 0.600272
@@ -219,3 +220,6 @@ collision_mask = 4
 [node name="RightRayCast" type="RayCast3D" parent="."]
 transform = Transform3D(0.368, 0, 0, 0, -1.95827e-08, -0.367, 0, 0.448, -1.60421e-08, 2.08165e-12, 2.08165e-12, 2.08165e-12)
 collision_mask = 4
+
+[node name="Attacks" type="Node3D" parent="."]
+script = ExtResource("3_lb45f")
